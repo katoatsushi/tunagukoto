@@ -1,0 +1,59 @@
+.shashoku_tag { 
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #32CD32;
+  background: #CBFFD3;/*色*/
+  border-radius: 4px;/*角の丸み*/
+  text-align: center;
+  font-weight: bold;
+  width:100px;
+  border: solid 2px #32CD32;/*線色*/
+
+}
+
+.gakushoku_tag { 
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #32CD32;
+  background: #CBFFD3;/*色*/
+  border-radius: 4px;/*角の丸み*/
+  text-align: center;
+  font-weight: bold;
+  width:100px;
+  border: solid 2px #32CD32;/*線色*/
+
+}
+
+.studying_tag { 
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #32CD32;
+  background: #CBFFD3;/*色*/
+  border-radius: 4px;/*角の丸み*/
+  text-align: center;
+  font-weight: bold;
+  width:100px;
+  border: solid 2px #32CD32;/*線色*/
+
+}
+
+.another_tag { 
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #32CD32;
+  background: #CBFFD3;/*色*/
+  border-radius: 4px;/*角の丸み*/
+  text-align: center;
+  font-weight: bold;
+  width:100px;
+  border: solid 2px #32CD32;/*線色*/
+
+}

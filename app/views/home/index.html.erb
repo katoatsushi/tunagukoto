@@ -1,0 +1,47 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!--デバイスによってデザイン変更 -->
+    <!-- デバイスサイズ640px以下 -->
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:750px)" href="stylesheet/devise_devide/smart_phone_info.css"/>
+    <!-- デバイスサイズ641px以上 -->
+    <link rel="stylesheet" type="text/css" media="screen and (min-device-width:751px)" href="stylesheet/devise_devide/pc_info.css" />
+
+<div class="container">
+	<div class="col-md-5">
+	    <div class="info_box">
+	    	<div class="info_tag">お知らせ</div>
+	    	<% @infos.each do |i| %>
+		    <div class="info_detail_box">
+		    	・<%= i.info_header %>
+		    </div>	
+		    <% end %>	    
+		</div>
+	</div>
+	<div class="col-md-7">
+	    <% @events.each do |e| %>
+	    <div class="event_box">
+	    	<div class="event_tags_box">
+			    <%= e.event_type %>
+				<p><%= link_to "#{e.event_name}",event_path(id: e.id), method: :get, class: "event_name" %></p>
+				<h4 class="event_time">開始時刻&nbsp;&nbsp;&nbsp;<%= e.event_time %></h4>
+				<h4 class="event_place">場所&nbsp;&nbsp;&nbsp;<%= e.event_place %></h4>
+				<% if e.event_cost == "無料" || e.event_cost == "0"%>
+					<h4 class="event_sankahi">参加費&nbsp;&nbsp;&nbsp;</h4><h4 class="event_cost_free">無料</h4>
+				<% else %>
+					<h4 class="event_cost">参加費&nbsp;&nbsp;&nbsp;<%= e.event_cost %></h4>
+				<% end %>
+				<div class="event_detail">
+				<% if e.event_detail.length > 80 %>
+				<% detail = e.event_detail.slice(0..100) %>
+					<h4><%= detail %>...</h4>
+				<% else %>
+				<% detail = e.event_detail %>
+					<h4 class="event_detail"><%= detail %></h4>
+				<% end %>
+				</div>
+			</div>
+			<%= link_to '参 加 または 詳 細 へ',event_path(id: e.id), method: :get,class: "btn btn-info btn-lg btn-block" %>
+		</div>
+	    <% end %>
+	</div>
+</div>

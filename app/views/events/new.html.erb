@@ -1,0 +1,87 @@
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+
+<%= form_for @event, url: manager_events_path(params[:manager_id]) do |f| %>
+<div class="container">
+    <div class="col-xs-4">
+    </div>
+    <div class="col-xs-6">
+    	  <br>  <p class="text-center">すでに登録をお済みの方は <a href="http://bootstrap-ecommerce.com/"> こちらへ</a></p>
+	<hr>
+    <div class="simple_box">
+    	<% if flash[:notice] %>
+ 		 <h2 style="color:red;"><%= flash[:notice] %></h2>
+		<% end %>
+    	<div>
+			<div><h3 class="btn-start">イベント名</h3></div>
+			<%= f.text_field :event_name, class:"form-control input-lg",placeholder: " 例) 愛知県名古屋市千種区〇〇町" %>
+		</div>
+    	<div>
+			<div><h3 class="btn-start">場所</h3></div>
+			<%= f.text_field :event_place, class:"form-control input-lg",placeholder: " 例) 愛知県名古屋市千種区〇〇町" %>
+		</div>
+		    <table>
+		    <tr>
+				<div><h3 class="btn-start">イベントの種類</h3></div>
+		      	<%= f.radio_button :event_type, {} %><br />
+		        <td>
+			        <input type="radio" name="event_type" id="type_1" value="シャショク" checked>
+			        <label class="button-style-label" for="type_1">シャショク</label>
+		        </td>
+			    <td>
+			        <input type="radio" name="event_type" id="type_2" value="ガクショク">
+			        <label class="button-style-label" for="type_2">ガクショク</label>
+			    </td>
+			    <td>
+			        <input type="radio" name="event_type" id="type_3" value="勉強会">
+			        <label class="button-style-label" for="type_3">勉強会</label>
+			    </td>
+		        <td>
+			        <input type="radio" name="event_type" id="type_4" value="その他">
+			        <label class="button-style-label" for="type_4">その他</label>
+		        </td>
+		    </tr>
+		    </table>		
+    	<div>
+
+		<div><h3 class="btn-start">参加費</h3></div>
+		<%= f.text_field :event_cost, class:"form-control input-lg",placeholder: " 例) 2000" %>
+		</div>	
+
+		<div><h3 class="btn-start">開始時刻</h3></div>
+	  	<%= raw sprintf(
+	    f.datetime_select(
+	      :event_time,# プロパティ名
+	      {
+	        start_year:     Time.zone.now.prev_year.year,# 選択可能な開始年
+	        end_year:       Time.zone.now.next_year.year,# 選択可能な終了年
+	        default:        Time.zone.now,# デフォルトの年
+	        use_two_digit_numbers: true,# 月日を2桁の値で表示
+	        date_separator: '%s',# 年, 月
+	        datetime_separator: '%s',# 日
+	        time_separator: '%s'# 時
+	      },# オプション
+	      { class: 'date-select' }# htmlオプションを指定する場合は別で指定
+	    ),
+	    '年 ', '月 ', '日 ', '時 ') + '分'# 分 は最後につけ加えられる
+	  	%>
+
+    	<div>
+    		<div><h3 class="btn-finish">開始時刻</h3></div>
+			<%= f.text_field :event_belongings, class:"form-control input-lg",placeholder: " 例) 筆記用具、履歴書" %>
+		</div>
+	  	<div class="column">
+			<div class="input-text">
+			    <div><h3 class="btn-finish">詳細</h3></div>
+			  	<%= f.text_area :event_detail %>
+			</div>
+		</div>
+
+		<%=f.submit '投 稿 す る', class: 'btn btn-primary btn-lg btn-block' %>
+</div>
+</div>
+</div>
+
+
+
+<%end%>
+

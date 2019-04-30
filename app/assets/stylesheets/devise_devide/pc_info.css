@@ -1,0 +1,12 @@
+.info_detail_box {
+	padding: 0;
+	margin: 3px;
+	font-size:1.0em;
+	overflow:auto;
+	/*word-break : break-all;*/　
+}
+.info_form_box {
+	padding: 100px 10px 200px 20px;
+	margin: 30px;
+	background-color: #DDDDDD ;
+}

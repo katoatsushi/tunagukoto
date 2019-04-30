@@ -1,0 +1,44 @@
+.event_name {
+	color: #00CCCC;
+	font-size: 1.8em;
+}
+
+.event_time {
+	color: #555555;
+	font-size: 1.3em;
+}
+
+.event_place {
+	color: #555555;
+	font-size: 1.3em;
+}
+
+.event_cost {
+	color: #555555;
+	font-size: 1.3em;
+	display:inline;
+}
+
+.event_cost_free {
+	color: red;
+	font-weight: 100
+	font-size: 1.3em;
+	display:inline;
+}
+.event_sankahi {
+	color: #555555;
+	font-size: 1.3em;
+	display:inline;
+}
+
+.event_detail {
+	margin: 1px;
+	color: #888888;
+	font-size: 1.2em;
+	display:inline;
+}
+/*.event_tags_box {
+	margin:100px,10px,10px,10px;
+	padding:10px,10px,10px,10px;
+	background-color: grey;
+}*/

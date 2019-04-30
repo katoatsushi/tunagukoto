@@ -1,0 +1,41 @@
+.simple_box {
+	padding: 30px 20px 20px 30px;
+	margin: 10px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.event_box {
+	padding: 30px 20px 20px 30px;
+	margin: 5px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.outer_box {
+	padding: 15px;
+	margin: 15px;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.info_box {
+	padding: 10px 10px 10px 10px;
+	margin: 0px 0px 20px 0px;
+	background-color:#e8f7f7;
+	box-shadow: 0 1px 5px rgba(82, 156, 242, 0.5);
+}
+ 
+.info_tag { 
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #32CD32;
+  background: #CBFFD3;/*色*/
+  border-radius: 4px;/*角の丸み*/
+  text-align: center;
+  font-weight: bold;
+  width:100px;
+  border: solid 2px #32CD32;/*線色*/
+/*  overflow-wrap : break-word;*/
+
+}
+

@@ -1,0 +1,32 @@
+<% if manager_signed_in?   %>
+
+	<%= form_for @info, url: informations_path do |f| %>
+
+	<div class="container">
+	    <div class="col-xs-4">
+	    </div>
+	      	<h3 style="text-align: center; color: red;"> </br>ここで投稿された内容は、ホーム画面のお知らせの部分に反映されます。</br> また、この画面は管理者しか見ることができません。</h3> 
+	    <div class="info_form_box">
+		    <div class="col-xs-6">
+				<%= f.label :タイトル  %>
+				<%= f.text_field :info_header ,class:"form-control input-lg",placeholder: " 例) 5/10 のイベントの時間変更について" %>
+				<div class="column">
+					<div class="input-text">
+						<%= f.label :本文 %>
+						<%= f.text_area :info_body ,placeholder: " 例) 5/10 のイベントの開始時刻は17:00からとなっておりましたが、30分遅れの18:00からに変更となりました。" %>
+					</div>
+				</div>
+				<%= f.label :URL %>
+				<%= f.text_field :info_url ,class:"form-control input-lg" ,placeholder: "例　）https://www.youtube.com/watch?v=MhhjxNDypKo"%>
+			</div>
+		</div>
+		<%=f.submit 'お知らせを投稿する', class: 'btn btn-primary btn-lg btn-block' %>
+	</div>
+	<% end %>
+
+
+<% else %>
+	<h1> 404 page not found</h1>
+	<h3 style="text-align: center;"><%= link_to 'ホームに戻る', root_path,method: :get %>
+	</h3>
+<% end %>
