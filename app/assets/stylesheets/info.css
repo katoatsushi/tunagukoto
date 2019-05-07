@@ -1,11 +1,33 @@
-/*.info_detail_box {
+.info_detail_box {
 	padding: 0;
 	margin: 3px;
-	font-size:1.0em;
+	font-size:0.9em;
 	overflow:auto;　
 }
 .info_form_box {
 	padding: 100px 10px 200px 20px;
 	margin: 30px;
 	background-color: #DDDDDD ;
-}*/
+}
+.info_box {
+	padding: 10px 10px 10px 10px;
+	margin: 10px 0px 20px 0px;
+	background-color:#e8f7f7;
+	box-shadow: 0 1px 5px rgba(82, 156, 242, 0.5);
+}
+ 
+.info_tag { 
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #32CD32;
+  background: #CBFFD3;/*色*/
+  border-radius: 4px;/*角の丸み*/
+  text-align: center;
+  font-weight: bold;
+  width:100px;
+  border: solid 2px #32CD32;/*線色*/
+/*  overflow-wrap : break-word;*/
+
+}

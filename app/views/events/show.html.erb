@@ -1,1 +1,36 @@
-show
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">
+		</div>
+		<div class="col-md-8">
+		    <div class="event_box">
+		    	<div>
+				    <% if @event.event_type == "シャショク" %>
+						<div class="shashoku_tag"><%= @event.event_type %></div>
+					<% elsif @event.event_type == "ガクショク" %>
+						<div class="gakushoku_tag"><%= @event.event_type %></div>
+					<% elsif @event.event_type == "勉強会" %>
+						<div class="studying_tag"><%= @event.event_type %></div>
+					<% elsif @event.event_type == "その他" %>
+						<div class="another_tag"><%= @event.event_type %></div>
+					<% else %>
+					<% end %>
+					<h4 class="event_time">開始時刻&nbsp;&nbsp;&nbsp;<%= @event.event_name %></h4>
+					<h4 class="event_time">開始時刻&nbsp;&nbsp;&nbsp;<%= @event.event_time %></h4>
+					<h4 class="event_place">場所&nbsp;&nbsp;&nbsp;<%= @event.event_place %></h4>
+					<% if @event.event_cost == "無料" || @event.event_cost == "0"%>
+						<h4 class="event_sankahi">参加費&nbsp;&nbsp;&nbsp;</h4><h4 class="event_cost_free">無料</h4>
+					<% else %>
+						<h4 class="event_cost">参加費&nbsp;&nbsp;&nbsp;<%= @event.event_cost %></h4>
+					<% end %>
+				</div>
+				<div class="event_detail_full">
+					<h4 class="event_detail_font">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<%= @event.event_detail %></h4>
+				</div>
+				<button type="button" class="btn btn-warning btn-lg btn-block"><%= @event.event_type %>に参加する</button>
+			</div>
+		</div>
+		<div class="col-md-2">
+		</div>
+	</div>
+</div>

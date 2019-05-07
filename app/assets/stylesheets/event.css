@@ -37,8 +37,16 @@
 	font-size: 1.2em;
 	display:inline;
 }
-/*.event_tags_box {
-	margin:100px,10px,10px,10px;
-	padding:10px,10px,10px,10px;
-	background-color: grey;
-}*/
+
+.event_detail_full {
+	margin: 1px;
+	padding:10px;
+	margin: 10px 0px 10px 0px;
+	box-shadow:0px 0px 2px 1.5px #EEEEEE inset;
+}
+
+.event_detail_font {
+	color: #888888;
+	font-size: 1.1em;
+	word-wrap: break-word;
+}

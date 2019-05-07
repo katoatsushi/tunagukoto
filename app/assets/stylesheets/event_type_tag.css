@@ -2,14 +2,15 @@
   position: relative;
   display: inline-block;
   padding: 0.25em 0.5em;
+  margin: 1.0em 0em 1.0em 0em;
   text-decoration: none;
-  color: #32CD32;
-  background: #CBFFD3;/*色*/
-  border-radius: 4px;/*角の丸み*/
+  color:#7CFC00;
+  background: #FF0461;/*色*/
+  border-radius: 40px;/*角の丸み*/
   text-align: center;
   font-weight: bold;
   width:100px;
-  border: solid 2px #32CD32;/*線色*/
+  border: solid 2px #FF0461;/*線色*/
 
 }
 
@@ -17,14 +18,15 @@
   position: relative;
   display: inline-block;
   padding: 0.25em 0.5em;
+  margin: 1.0em 0em 1.0em 0em;
   text-decoration: none;
-  color: #32CD32;
-  background: #CBFFD3;/*色*/
-  border-radius: 4px;/*角の丸み*/
+  color: #FFFF00;
+  background: #0000CD;/*色*/
+  border-radius: 40px;/*角の丸み*/
   text-align: center;
   font-weight: bold;
   width:100px;
-  border: solid 2px #32CD32;/*線色*/
+  border: solid 2px #0000CD;/*線色*/
 
 }
 
@@ -32,10 +34,11 @@
   position: relative;
   display: inline-block;
   padding: 0.25em 0.5em;
+  margin: 1.0em 0em 1.0em 0em;
   text-decoration: none;
-  color: #32CD32;
-  background: #CBFFD3;/*色*/
-  border-radius: 4px;/*角の丸み*/
+  color: #FF00FF;
+  background: #32CD32;/*色*/
+  border-radius: 40px;/*角の丸み*/
   text-align: center;
   font-weight: bold;
   width:100px;
@@ -47,13 +50,14 @@
   position: relative;
   display: inline-block;
   padding: 0.25em 0.5em;
+  margin: 1.0em 0em 1.0em 0em;
   text-decoration: none;
-  color: #32CD32;
-  background: #CBFFD3;/*色*/
-  border-radius: 4px;/*角の丸み*/
+  color: #FFF8DC;
+  background: #696969;/*色*/
+  border-radius: 40px;/*角の丸み*/
   text-align: center;
   font-weight: bold;
   width:100px;
-  border: solid 2px #32CD32;/*線色*/
+  border: solid 2px #696969;/*線色*/
 
 }

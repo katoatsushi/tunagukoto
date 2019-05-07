@@ -6,15 +6,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    
-    <!--デバイスによってデザイン変更 -->
-    <!-- デバイスサイズ640px以下 -->
- <!--    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width:640px)" href="css/smartphone.css"/> -->
-    <!-- デバイスサイズ641px以上 -->
-<!--     <link rel="stylesheet" type="text/css" media="screen and (min-device-width:641px)" href="css/pc.css" /> -->
+ <!-- ナビバー -->
+<!--  <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
+ -->
 
 
     <title>ツナグコト</title>
@@ -22,9 +23,8 @@
 
   <body>
 
-	<%= render 'layouts/header.html.erb' %>
-
-
+	  <%= render 'layouts/header.html.erb' %>
     <%= yield %>
+    <%= render 'layouts/footer.html.erb' %>
   </body>
 </html>
